@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "19b42737-ef13-4276-a3d3-04457b87ff76",
+		"name": "ExpressJS Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25616933",
+		"_collection_link": "https://dark-zodiac-515441.postman.co/workspace/My-Workspace~842b2937-3d99-46b4-88ff-88e3497a5bac/collection/25616933-19b42737-ef13-4276-a3d3-04457b87ff76?action=share&source=collection_link&creator=25616933"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"usama@gmail.com\",\r\n    \"full_name\":\"Usama Akbar\",\r\n    \"password\":\"Usama123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"usama@gmail.com\",\r\n    \"password\":\"Usama123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2NGIxMDFlY2Y4ODlkNzczZTFiNTNlZCIsImVtYWlsIjoidXNhbWFAZ21haWwuY29tIiwiZnVsbF9uYW1lIjoiVXNhbWEgQWtiYXIiLCJwYXNzd29yZCI6IiQyYSQxMCRwc29CZ0FObDdMOGtrL2pPUGV2STQuSTk0OXRFS005TnU2SVNBMlNYNTNkME9rSTd4bmdtYSIsImNyZWF0ZWRfYXQiOiIyMDI0LTA1LTIwVDA4OjU1OjU4LjYwM1oiLCJjcmVhdGVkQXQiOiIyMDI0LTA1LTIwVDA4OjU1OjU4LjYxMloiLCJ1cGRhdGVkQXQiOiIyMDI0LTA1LTIwVDA4OjU1OjU4LjYxMloiLCJfX3YiOjB9LCJpYXQiOjE3MTYxOTc0MTYsImV4cCI6MTcxNjI4MzgxNn0.XF7wkEAbssMWkMSGvPJ7fSkfV7GG-WnwPkauL6oYUhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "specific user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2NGIxMDFlY2Y4ODlkNzczZTFiNTNlZCIsImVtYWlsIjoidXNhbWFAZ21haWwuY29tIiwiZnVsbF9uYW1lIjoiVXNhbWEgQWtiYXIiLCJwYXNzd29yZCI6IiQyYSQxMCRwc29CZ0FObDdMOGtrL2pPUGV2STQuSTk0OXRFS005TnU2SVNBMlNYNTNkME9rSTd4bmdtYSIsImNyZWF0ZWRfYXQiOiIyMDI0LTA1LTIwVDA4OjU1OjU4LjYwM1oiLCJjcmVhdGVkQXQiOiIyMDI0LTA1LTIwVDA4OjU1OjU4LjYxMloiLCJ1cGRhdGVkQXQiOiIyMDI0LTA1LTIwVDA4OjU1OjU4LjYxMloiLCJfX3YiOjB9LCJpYXQiOjE3MTYxOTc0MTYsImV4cCI6MTcxNjI4MzgxNn0.XF7wkEAbssMWkMSGvPJ7fSkfV7GG-WnwPkauL6oYUhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/664b45e56edee6368b2ccdb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"664b45e56edee6368b2ccdb6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2NGIxMDFlY2Y4ODlkNzczZTFiNTNlZCIsImVtYWlsIjoidXNhbWFAZ21haWwuY29tIiwiZnVsbF9uYW1lIjoiVXNhbWEgQWtiYXIiLCJwYXNzd29yZCI6IiQyYSQxMCRwc29CZ0FObDdMOGtrL2pPUGV2STQuSTk0OXRFS005TnU2SVNBMlNYNTNkME9rSTd4bmdtYSIsImNyZWF0ZWRfYXQiOiIyMDI0LTA1LTIwVDA4OjU1OjU4LjYwM1oiLCJjcmVhdGVkQXQiOiIyMDI0LTA1LTIwVDA4OjU1OjU4LjYxMloiLCJ1cGRhdGVkQXQiOiIyMDI0LTA1LTIwVDA4OjU1OjU4LjYxMloiLCJfX3YiOjB9LCJpYXQiOjE3MTYxOTc0MTYsImV4cCI6MTcxNjI4MzgxNn0.XF7wkEAbssMWkMSGvPJ7fSkfV7GG-WnwPkauL6oYUhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" :\"ahmadusama@gmail.com\",\r\n    \"full_name\":\"Ahmad Usama 2\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/664b45e56edee6368b2ccdb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"664b45e56edee6368b2ccdb6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2NGIxMDFlY2Y4ODlkNzczZTFiNTNlZCIsImVtYWlsIjoidXNhbWFAZ21haWwuY29tIiwiZnVsbF9uYW1lIjoiVXNhbWEgQWtiYXIiLCJwYXNzd29yZCI6IiQyYSQxMCRwc29CZ0FObDdMOGtrL2pPUGV2STQuSTk0OXRFS005TnU2SVNBMlNYNTNkME9rSTd4bmdtYSIsImNyZWF0ZWRfYXQiOiIyMDI0LTA1LTIwVDA4OjU1OjU4LjYwM1oiLCJjcmVhdGVkQXQiOiIyMDI0LTA1LTIwVDA4OjU1OjU4LjYxMloiLCJ1cGRhdGVkQXQiOiIyMDI0LTA1LTIwVDA4OjU1OjU4LjYxMloiLCJfX3YiOjB9LCJpYXQiOjE3MTYxOTc0MTYsImV4cCI6MTcxNjI4MzgxNn0.XF7wkEAbssMWkMSGvPJ7fSkfV7GG-WnwPkauL6oYUhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" :\"ahmadusama@gmail.com\",\r\n    \"full_name\":\"Ahmad Usama 2\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/664b45e56edee6368b2ccdb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"664b45e56edee6368b2ccdb6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
