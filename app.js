@@ -15,6 +15,7 @@ connectDb()
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(logger('dev'));
+app.use(cors())
 app.use(cors({
   origin: 'http://localhost:3000', // replace with your frontend URL
   methods: 'GET,POST,PUT,DELETE,OPTIONS',
